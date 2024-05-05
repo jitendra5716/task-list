@@ -21,7 +21,7 @@ app.get('/task',async(req,res)=>{
 
         res.send(tasks.Items);
     }catch(err){
-       res.status(401).send("Error in fetching tasks ",err);
+       res.status(400).send("Error in fetching tasks ",err);
     }
 });
 
