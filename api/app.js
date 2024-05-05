@@ -19,7 +19,7 @@ app.get('/task',async(req,res)=>{
     try{
         const tasks = await fetchTasks();
 
-        res.status(200).send(tasks.Items)
+        res.send(tasks.Items);
     }catch(err){
        res.status(401).send("Error in fetching tasks ",err);
     }
