@@ -60,9 +60,11 @@ app.delete("/task/:id",async(req,res)=>{
 
 
 
+if(process.env.DEVELOPMENT){
+    app.listen(port,()=>{
+        console.log("Express server is running on port ",port);
+    })
+};
 
-app.listen(port,()=>{
-    console.log("Express server is running on port ",port);
-})
 
 export const handler = serverless(app);
